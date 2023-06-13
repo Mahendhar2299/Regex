@@ -5,11 +5,11 @@ import java.util.regex.Pattern;
 
 public class UserDetails {
 
-    String PHONE = "^[0-9]{1,3}[\\s][0-9]{10}$";
+    String PASSWORD = "^.{8,}$";
 
-    public void PhoneNumber(String phone) {
-        Pattern pattern = Pattern.compile(PHONE);
-        Matcher matcher = pattern.matcher(phone);
+        public void password(String Password) {
+        Pattern pattern = Pattern.compile(PASSWORD);
+        Matcher matcher = pattern.matcher(Password);
         System.out.println(matcher.matches());
     }
 }
