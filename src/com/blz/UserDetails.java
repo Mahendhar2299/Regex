@@ -4,12 +4,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserDetails {
-    String lastName="^[A-Z][a-z]{2,}$";
-    public void lastName(String name) {
 
-        Pattern pattern = Pattern.compile(lastName);
-        Matcher match = pattern.matcher(name);
-        System.out.println(match.matches());
+    String EMAIL = "^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9+_-]+)*@[a-zA-Z0-9]+([.][a-zA-Z0-9+_-]+)+$";
 
+    public void email(String email) {
+        Pattern pattern = Pattern.compile(EMAIL);
+        Matcher matcher = pattern.matcher(email);
+        System.out.println(matcher.matches());
     }
 }
