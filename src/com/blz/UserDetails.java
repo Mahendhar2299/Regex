@@ -5,11 +5,11 @@ import java.util.regex.Pattern;
 
 public class UserDetails {
 
-    String EMAIL = "^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9+_-]+)*@[a-zA-Z0-9]+([.][a-zA-Z0-9+_-]+)+$";
+    String PHONE = "^[0-9]{1,3}[\\s][0-9]{10}$";
 
-    public void email(String email) {
-        Pattern pattern = Pattern.compile(EMAIL);
-        Matcher matcher = pattern.matcher(email);
+    public void PhoneNumber(String phone) {
+        Pattern pattern = Pattern.compile(PHONE);
+        Matcher matcher = pattern.matcher(phone);
         System.out.println(matcher.matches());
     }
 }
